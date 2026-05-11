@@ -849,9 +849,16 @@ body {
 
 /* Service cards */
 .service-card {
+  background: var(--bg-card);
+  padding: 32px;
+  border-radius: 28px;
+  border: 1px solid var(--border);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
   position: relative;
   overflow: hidden;
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
 }
 
 .service-card::before {
@@ -870,14 +877,40 @@ body {
 }
 
 .service-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-  border-color: var(--accent-light);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-hover);
 }
 
 .service-card:hover .card-icon {
   transform: scale(1.1) rotate(5deg);
   color: var(--accent-light);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  color: var(--accent-light);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(59,130,246,0.1);
+}
+
+.service-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
 }
 
 /* Portfolio cards */
