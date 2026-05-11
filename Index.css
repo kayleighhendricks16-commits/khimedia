@@ -847,6 +847,12 @@ body {
   transform: translateY(-2px);
 }
 
+/* CSS DEBUGGING - Ensure styles are loading */
+body {
+  background: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
 /* Service cards */
 .service-card {
   background: var(--bg-card);
