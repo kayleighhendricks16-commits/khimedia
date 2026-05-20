@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Contact | KHI Media</title>
+  <meta name="description" content="Contact KHI Media to enquire about website design, website redesigns, social media support, brand direction, SEO foundations, and digital strategy.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body class="contact-page">
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-link">
+        <img id="siteLogo" src="lightlogo.png" data-light="lightlogo.png" data-dark="darklogo.png" alt="KHI Media" class="logo-img" onerror="this.src='https://placehold.co/200x60?text=KHI+Media'">
+      </a>
+      <div class="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+          <li><a href="index.html#process" class="nav-link">Process</a></li>
+          <li><a href="contact.html" class="nav-link active-nav page-active">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="#contact-form" class="btn-primary">Request a Quote <i class="fas fa-arrow-right"></i></a>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+      </div>
+      <div class="nav-spacer"></div>
+      <div class="mobile-actions">
+        <button class="theme-toggle mobile-theme-toggle" id="mobileThemeToggle" aria-label="Toggle theme">
+          <i class="fas fa-sun"></i>
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="slide-menu" id="slideMenu">
+    <div class="slide-menu-inner">
+      <div class="slide-menu-header">
+        <img src="lightlogo.png" data-light="lightlogo.png" data-dark="darklogo.png" alt="KHI Media" class="slide-logo" id="slideLogo" onerror="this.src='https://placehold.co/200x60?text=KHI+Media'">
+        <button class="slide-close" id="slideCloseBtn" aria-label="Close menu"><i class="fas fa-times"></i></button>
+      </div>
+      <nav class="slide-nav">
+        <ul class="slide-links">
+          <li><a href="index.html" class="slide-link">Home</a></li>
+          <li><a href="about.html" class="slide-link">About</a></li>
+          <li><a href="services.html" class="slide-link">Services</a></li>
+          <li><a href="portfolio.html" class="slide-link">Portfolio</a></li>
+          <li><a href="index.html#process" class="slide-link">Process</a></li>
+          <li><a href="contact.html" class="slide-link active-nav page-active">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="slide-footer">
+        <a href="#contact-form" class="btn-primary slide-cta">Request a Quote <i class="fas fa-arrow-right"></i></a>
+        <div class="slide-social">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section class="contact-hero">
+      <div class="container contact-hero-inner reveal">
+        <span class="hero-badge">Contact KHI Media</span>
+        <h1>Let’s build your online presence properly.</h1>
+        <p>Tell us what your business needs and we’ll help you find the right next step, whether that is a new website, social content, brand direction, or a clearer digital strategy.</p>
+        <div class="hero-buttons">
+          <a href="#contact-form" class="btn-primary">Request a Quote <i class="fas fa-arrow-right"></i></a>
+          <a href="https://wa.me/27656914952" class="btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp KHI Media</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-form" class="section contact-main">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Start the conversation</h2>
+          <p class="subhead">Fill in the form below and we’ll get back to you with a clear next step.</p>
+        </div>
+        <div class="contact-layout">
+          <form class="contact-form reveal" action="#" method="POST">
+            <!-- Replace # with your form backend endpoint, such as Formspree, Getform, Basin, Web3Forms, or your own server endpoint. -->
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="full_name">Full name</label>
+                <input id="full_name" name="full_name" type="text" placeholder="Your full name" required>
+              </div>
+              <div class="form-field">
+                <label for="business_name">Business name</label>
+                <input id="business_name" name="business_name" type="text" placeholder="Your business name">
+              </div>
+              <div class="form-field">
+                <label for="email">Email address</label>
+                <input id="email" name="email" type="email" placeholder="yourname@email.com" required>
+              </div>
+              <div class="form-field">
+                <label for="phone">Phone number</label>
+                <input id="phone" name="phone" type="tel" placeholder="065 000 0000">
+              </div>
+              <div class="form-field">
+                <label for="service">What do you need help with?</label>
+                <select id="service" name="service" required>
+                  <option value="">Please select an option</option>
+                  <option value="website_design">Website design</option>
+                  <option value="website_redesign">Website redesign</option>
+                  <option value="social_media_marketing">Social media marketing</option>
+                  <option value="brand_identity">Brand identity</option>
+                  <option value="seo_foundations">SEO foundations</option>
+                  <option value="digital_strategy">Digital strategy</option>
+                  <option value="not_sure_yet">Not sure yet</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="contact_method">Preferred contact method</label>
+                <select id="contact_method" name="contact_method">
+                  <option value="">Please select an option</option>
+                  <option value="email">Email</option>
+                  <option value="phone_call">Phone call</option>
+                  <option value="whatsapp">WhatsApp</option>
+                  <option value="no_preference">No preference</option>
+                </select>
+              </div>
+              <div class="form-field form-field-full">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell us a bit about your business, what you need, and what you would like to improve." required></textarea>
+              </div>
+            </div>
+            <button class="btn-primary form-submit" type="submit">Request a Quote <i class="fas fa-arrow-right"></i></button>
+            <p class="form-note">We’ll only use your details to respond to your enquiry.</p>
+          </form>
+
+          <aside class="contact-side">
+            <div class="contact-card reveal">
+              <h3>Prefer to reach out directly?</h3>
+              <div class="contact-detail-list">
+                <a href="mailto:contactus@KHIMedia.co.za" class="contact-detail">
+                  <i class="fas fa-envelope"></i>
+                  <span><strong>Email</strong>contactus@KHIMedia.co.za</span>
+                </a>
+                <a href="tel:+27656914952" class="contact-detail">
+                  <i class="fas fa-phone-alt"></i>
+                  <span><strong>Phone</strong>065 691 4952</span>
+                </a>
+                <a href="https://wa.me/27656914952" class="contact-detail" target="_blank">
+                  <i class="fab fa-whatsapp"></i>
+                  <span><strong>WhatsApp</strong>065 691 4952</span>
+                </a>
+                <div class="contact-detail">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span><strong>Location</strong>Johannesburg, South Africa</span>
+                </div>
+              </div>
+              <div class="contact-card-actions">
+                <a href="mailto:contactus@KHIMedia.co.za" class="btn-secondary">Email Us <i class="fas fa-envelope"></i></a>
+                <a href="https://wa.me/27656914952" class="btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+              </div>
+            </div>
+            <div class="support-card reveal">
+              <h3>Best for</h3>
+              <p>Website design, website redesigns, social media support, brand direction, SEO foundations, and digital strategy for growing businesses.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section next-steps">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>What happens after you enquire?</h2>
+        </div>
+        <div class="steps-grid">
+          <article class="step-card reveal">
+            <span>01</span>
+            <h3>We review your message</h3>
+            <p>We look at your business, your goals, and what you need help with.</p>
+          </article>
+          <article class="step-card reveal">
+            <span>02</span>
+            <h3>We suggest the best next step</h3>
+            <p>You’ll get a clear direction, not a confusing sales pitch.</p>
+          </article>
+          <article class="step-card reveal">
+            <span>03</span>
+            <h3>We plan the project</h3>
+            <p>If it feels like the right fit, we map out the scope, timeline, and what needs to happen next.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section service-areas-section">
+      <div class="container service-area-panel reveal">
+        <div>
+          <span class="contact-kicker">Service areas</span>
+          <h2>Working with businesses across Johannesburg and beyond.</h2>
+          <p>KHI Media is based in Johannesburg and works with businesses across Edenvale, Bedfordview, the East Rand, and surrounding areas. Remote support is also available across South Africa.</p>
+        </div>
+        <div class="location-tags">
+          <span>Johannesburg</span>
+          <span>Edenvale</span>
+          <span>Bedfordview</span>
+          <span>East Rand</span>
+          <span>Gauteng</span>
+          <span>South Africa</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section contact-faq">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Contact questions</h2>
+          <p class="subhead">A few quick answers before you send your enquiry.</p>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item reveal">
+            <button class="faq-question">Do I need to know exactly what I want before contacting you? <i class="fas fa-plus"></i></button>
+            <div class="faq-answer">No. If you are not sure yet, choose “Not sure yet” in the form and explain what you want to improve. We can help you decide the best next step.</div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-question">Can I contact you on WhatsApp instead? <i class="fas fa-plus"></i></button>
+            <div class="faq-answer">Yes. You can use the WhatsApp button if you prefer a quicker, more direct conversation.</div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-question">Do you work with small businesses? <i class="fas fa-plus"></i></button>
+            <div class="faq-answer">Yes. KHI Media works with businesses that want to improve how they look and communicate online, whether they are starting fresh or improving an existing presence.</div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-question">Can you help if I already have a website? <i class="fas fa-plus"></i></button>
+            <div class="faq-answer">Yes. We can review your current website and suggest improvements to the design, structure, wording, mobile experience, and SEO foundations.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta contact-cta">
+      <div class="container cta-inner reveal">
+        <h3>Ready to make your business look stronger online?</h3>
+        <p>Send an enquiry and let’s talk about the best way to improve your website, content, or digital presence.</p>
+        <div class="cta-buttons">
+          <a href="#contact-form" class="btn-primary">Request a Quote <i class="fas fa-arrow-right"></i></a>
+          <a href="https://wa.me/27656914952" class="btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp KHI Media</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="lightlogo.png" alt="KHI Media" class="footer-logo" onerror="this.src='https://placehold.co/200x60?text=KHI+Media'">
+          <p>KHI Media helps businesses create professional websites, stronger social content, and clearer digital brand systems built around trust, consistency, and growth.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="index.html#process">Process</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Website Design</a></li>
+            <li><a href="services.html">Website Development</a></li>
+            <li><a href="services.html">Social Media Marketing</a></li>
+            <li><a href="services.html">SEO Foundations</a></li>
+            <li><a href="services.html">Brand Identity</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul class="contact-list">
+            <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/27656914952">065 691 4952</a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:contactus@KHIMedia.co.za">contactus@KHIMedia.co.za</a></li>
+            <li><i class="fas fa-map-pin"></i> Johannesburg, SA</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> KHI Media. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/27656914952" class="floating-wa" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span>WhatsApp us</span>
+  </a>
+
+  <script src="index.js"></script>
+</body>
+</html>

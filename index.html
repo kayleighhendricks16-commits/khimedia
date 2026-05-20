@@ -2,214 +2,349 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover, shrink-to-fit=no">
-  <meta name="description" content="KHI Media — high-performance websites, SEO, and digital strategy for businesses that want to grow. Based in Johannesburg.">
-  <title>KHI Media | Premium Digital Agency — Johannesburg</title>
-  
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@1,900,700,500,300,400&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>KHI Media | Website Design, Development and Digital Strategy</title>
+  <meta name="description" content="KHI Media creates websites, social content, and brand systems for businesses in Johannesburg, Edenvale, Bedfordview, the East Rand, and surrounding areas.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="Index.css">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <!-- Parallax Background -->
-  <div class="parallax-container">
-    <div class="parallax-layer parallax-bg-1"></div>
-    <div class="parallax-layer parallax-bg-2"></div>
-  </div>
 
-  <header class="navbar">
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
     <div class="container nav-container">
-      <div class="logo">
-        <img src="lightlogo.png" alt="KHI Media logo" class="logo-image light-logo">
-        <img src="darklogo.png" alt="KHI Media logo" class="logo-image dark-logo">
+      <a href="index.html" class="logo-link">
+        <img id="siteLogo" src="lightlogo.png" data-light="lightlogo.png" data-dark="darklogo.png" alt="KHI Media" class="logo-img" onerror="this.src='https://placehold.co/200x60?text=KHI+Media'">
+      </a>
+      <div class="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active-nav">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+          <li><a href="#process" class="nav-link">Process</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="contact.html" class="btn-primary">Request a Quote <i class="fas fa-arrow-right"></i></a>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
       </div>
-
-      <nav class="nav-links">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="services.html" class="nav-link">Services</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="portfolio.html" class="nav-link">Portfolio</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </nav>
-
-      <div class="desktop-right-group">
-        <a href="contact.html" class="start-project-desktop">Start a project</a>
-        <button class="theme-toggle" id="themeToggle" aria-label="Switch theme">
+      <div class="nav-spacer"></div>
+      <div class="mobile-actions">
+        <button class="theme-toggle mobile-theme-toggle" id="mobileThemeToggle" aria-label="Toggle theme">
           <i class="fas fa-sun"></i>
           <i class="fas fa-moon"></i>
         </button>
-      </div>
-
-      <div class="mobile-controls">
-        <button class="theme-toggle mobile-theme-toggle" id="mobileThemeToggle" aria-label="Switch theme">
-          <i class="fas fa-sun"></i>
-          <i class="fas fa-moon"></i>
-        </button>
-        <button class="mobile-toggle" aria-label="Menu">
+        <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </header>
 
-  <div class="menu-overlay" id="menuOverlay">
-    <div class="menu-overlay-header">
-      <div class="menu-logo">
-        <img src="lightlogo.png" alt="KHI Media logo" class="menu-logo-image light-logo">
-        <img src="darklogo.png" alt="KHI Media logo" class="menu-logo-image dark-logo">
+  <!-- Slide‑in menu -->
+  <div class="slide-menu" id="slideMenu">
+    <div class="slide-menu-inner">
+      <div class="slide-menu-header">
+        <img src="lightlogo.png" data-light="lightlogo.png" data-dark="darklogo.png" alt="KHI Media" class="slide-logo" id="slideLogo" onerror="this.src='https://placehold.co/200x60?text=KHI+Media'">
+        <button class="slide-close" id="slideCloseBtn"><i class="fas fa-times"></i></button>
       </div>
-      <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close menu">✕</button>
-    </div>
-    <div class="menu-overlay-inner">
-      <nav class="mobile-nav">
-        <a href="index.html" class="mobile-nav-link">Home</a>
-        <a href="services.html" class="mobile-nav-link">Services</a>
-        <a href="about.html" class="mobile-nav-link">About</a>
-        <a href="portfolio.html" class="mobile-nav-link">Portfolio</a>
-        <a href="contact.html" class="mobile-nav-link">Contact</a>
-        <a href="contact.html" class="mobile-cta">Start a project <i class="fas fa-arrow-right"></i></a>
+      <nav class="slide-nav">
+        <ul class="slide-links">
+          <li><a href="index.html" class="slide-link">Home</a></li>
+          <li><a href="about.html" class="slide-link">About</a></li>
+          <li><a href="services.html" class="slide-link">Services</a></li>
+          <li><a href="portfolio.html" class="slide-link">Portfolio</a></li>
+          <li><a href="#process" class="slide-link">Process</a></li>
+          <li><a href="contact.html" class="slide-link">Contact</a></li>
+        </ul>
       </nav>
+      <div class="slide-footer">
+        <a href="contact.html" class="btn-primary slide-cta">Request a Quote <i class="fas fa-arrow-right"></i></a>
+        <div class="slide-social">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
     </div>
   </div>
 
   <main>
-    <!-- Hero Section – IMPROVED (sharp copy, clear hierarchy, no numbers) -->
-    <section id="home" class="hero">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-bg">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+        <div class="shape shape-6"></div>
+      </div>
       <div class="container hero-container">
-        <div class="hero-content">
-          <h1 class="hero-title">A Stronger Online Presence <span class="accent-text">Starts Here</span></h1>
-          <p class="hero-subtext">We Build Modern Websites, SEO Systems, And Social Media That Help Businesses Earn Attention, Build Trust, And Grow Faster Online.</p>
+        <div class="hero-content reveal">
+          <span class="hero-badge">Design • Develop • Grow</span>
+          <h1 class="hero-title-colour">
+            <span class="hero-word-1">A</span>
+            <span class="hero-word-2">Stronger</span>
+            <span class="hero-word-3">Online</span>
+            <span class="hero-word-4">Presence</span>
+            <span class="hero-word-5">Starts</span>
+            <span class="hero-word-6">Here</span>
+          </h1>
+          <p>KHI Media creates websites, brand visuals, and social content that help your business look professional, communicate clearly, and turn online attention into real enquiries.</p>
           <div class="hero-buttons">
-            <a href="contact.html" class="btn-primary magnetic cursor-interactive">Work With Us <i class="fas fa-arrow-right"></i></a>
-            <a href="portfolio.html" class="btn-secondary magnetic cursor-interactive">Explore Our Portfolio <i class="fas fa-briefcase"></i></a>
+            <a href="contact.html" class="btn-primary">Request a Quote <i class="fas fa-arrow-right"></i></a>
+            <a href="services.html" class="btn-secondary">Explore Services <i class="fas fa-compass"></i></a>
           </div>
-        </div>
-        <div class="hero-visual">
-          <div class="ambient-glow"></div>
-          <div class="hero-abstract">
-            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&auto=format" alt="Creative workspace">
+          <div class="hero-features">
+            <span><i class="fas fa-check-circle"></i> Professional website design</span>
+            <span><i class="fas fa-check-circle"></i> Clear brand messaging</span>
+            <span><i class="fas fa-check-circle"></i> SEO-ready structure</span>
           </div>
         </div>
       </div>
-      <div class="section-divider-blue"></div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
+    <!-- Services -->
+    <section class="section services">
       <div class="container">
-        <div class="section-header"><span class="section-tag">what we do</span><h2>Services that get results</h2></div>
+        <div class="section-header reveal">
+          <h2>Digital services built to make your business look credible and easy to trust.</h2>
+          <p class="subhead">From your website to your social content, we help your brand feel consistent, professional, and ready for the customers you want to reach.</p>
+        </div>
         <div class="services-grid">
-          <div class="service-card card-3d glass-card hover-lift magnetic cursor-interactive"><div class="card-icon"><i class="fas fa-laptop-code"></i></div><h3>Website Development</h3><p>Custom, responsive websites built for speed, SEO, and conversions.</p></div>
-          <div class="service-card card-3d glass-card hover-lift magnetic cursor-interactive"><div class="card-icon"><i class="fas fa-search"></i></div><h3>SEO Services</h3><p>Technical SEO, content strategy, and local search – so the right people find your business.</p></div>
-          <div class="service-card card-3d glass-card hover-lift magnetic cursor-interactive"><div class="card-icon"><i class="fas fa-hashtag"></i></div><h3>Social Media Marketing</h3><p>Organic and paid campaigns that build communities and turn followers into customers.</p></div>
-          <div class="service-card card-3d glass-card hover-lift magnetic cursor-interactive"><div class="card-icon"><i class="fas fa-palette"></i></div><h3>Brand Identity</h3><p>Distinctive, memorable branding that helps you stand out and earn trust.</p></div>
-          <div class="service-card card-3d glass-card hover-lift magnetic cursor-interactive"><div class="card-icon"><i class="fas fa-chart-line"></i></div><h3>Digital Strategy</h3><p>Clear roadmaps that align your goals with what actually works online.</p></div>
-          <div class="service-card card-3d glass-card hover-lift magnetic cursor-interactive"><div class="card-icon"><i class="fas fa-tachometer-alt"></i></div><h3>Performance Optimization</h3><p>Improving website speed, UX, and conversion flow to increase real business results.</p></div>
+          <div class="service-card reveal"><i class="fas fa-palette"></i><h3>Website Design</h3><p>Clean, modern layouts that make your business look professional and guide visitors towards taking action.</p></div>
+          <div class="service-card reveal"><i class="fas fa-code"></i><h3>Website Development</h3><p>Responsive, fast-loading websites built with clear structure, smooth navigation, and a strong user experience.</p></div>
+          <div class="service-card reveal"><i class="fas fa-bullhorn"></i><h3>Social Media Marketing</h3><p>Content planning, post design, and social media direction that keeps your brand active, consistent, and easy to recognise.</p></div>
+          <div class="service-card reveal"><i class="fas fa-magnifying-glass"></i><h3>SEO Foundations</h3><p>Search-friendly page structure, metadata, and technical basics to help your website start with the right foundation.</p></div>
+          <div class="service-card reveal"><i class="fas fa-brush"></i><h3>Brand Identity</h3><p>Colours, typography, logo direction, and visual rules that help your brand feel more polished and consistent.</p></div>
+          <div class="service-card reveal"><i class="fas fa-chart-line"></i><h3>Digital Strategy</h3><p>A clear plan for how your website, content, and online presence should work together to support your business goals.</p></div>
         </div>
+        <div class="view-all"><a href="services.html" class="btn-secondary">View all services <i class="fas fa-arrow-right"></i></a></div>
       </div>
-      <div class="section-divider-blue-light"></div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-      <div class="container about-grid">
-        <div class="about-image"><div class="image-wrapper"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=700&auto=format" alt="KHI Media team"></div></div>
-        <div class="about-content">
-          <span class="section-tag">built in Johannesburg</span>
-          <h2>We build digital tools that actually work.</h2>
-          <p>KHI Media is a Johannesburg‑based digital agency. We focus on one thing: helping businesses grow through smart websites, honest SEO, and marketing that makes sense. No fluff, no fake promises – just clear strategy and solid execution.</p>
-          <div class="feature-list">
-            <div><i class="fas fa-check-circle"></i> SEO‑focused from day one</div>
-            <div><i class="fas fa-check-circle"></i> Responsive design, every time</div>
-            <div><i class="fas fa-check-circle"></i> Transparent communication</div>
-            <div><i class="fas fa-check-circle"></i> Results you can measure</div>
+    <!-- Differentiation -->
+    <section class="section diff">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Built for businesses that need to look stronger online.</h2>
+          <p class="subhead">Many businesses already have a website or social media pages, but they often feel outdated, inconsistent, or unclear. KHI Media helps bring everything together so your brand feels more professional from the first click.</p>
+        </div>
+        <div class="diff-grid">
+          <div class="diff-card reveal"><i class="fas fa-layer-group"></i><h3>Cleaner structure</h3><p>Layouts that make your services easy to understand and your next step easy to find.</p></div>
+          <div class="diff-card reveal"><i class="fas fa-lightbulb"></i><h3>Sharper messaging</h3><p>Simple, direct wording that explains what you do, who you help, and why customers should choose you.</p></div>
+          <div class="diff-card reveal"><i class="fas fa-check-double"></i><h3>Consistent brand presence</h3><p>Website pages, social content, and visuals that feel connected across every touchpoint.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Preview -->
+    <section class="section portfolio">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Selected work and brand direction.</h2>
+          <p class="subhead">A look at website and content concepts focused on stronger visuals, clearer messaging, and better user experience.</p>
+        </div>
+        <div class="portfolio-grid">
+          <div class="portfolio-card reveal">
+            <div class="portfolio-img portfolio-img-1"></div>
+            <span class="cat">Restaurant Brand</span>
+            <h3>The Fat Mermaid</h3>
+            <p>A bold visual direction for a hospitality brand, with clear content structure and a stronger online feel.</p>
+            <a href="portfolio.html" class="preview-link">View project →</a>
+          </div>
+          <div class="portfolio-card reveal">
+            <div class="portfolio-img portfolio-img-2"></div>
+            <span class="cat">Security Services</span>
+            <h3>Mamba Security</h3>
+            <p>A trust-focused website direction with clear service sections, strong messaging, and a more professional first impression.</p>
+            <a href="portfolio.html" class="preview-link">View project →</a>
+          </div>
+          <div class="portfolio-card reveal">
+            <div class="portfolio-img portfolio-img-3"></div>
+            <span class="cat">Local Business</span>
+            <h3>Landing Page Concept</h3>
+            <p>A mobile-friendly concept built around clear copy, strong calls to action, and simple lead generation.</p>
+            <a href="portfolio.html" class="preview-link">Preview concept →</a>
           </div>
         </div>
+        <div class="view-all"><a href="portfolio.html" class="btn-secondary">View full portfolio <i class="fas fa-arrow-right"></i></a></div>
       </div>
-      <div class="section-divider-blue"></div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-      <div class="container">
-        <div class="section-header"><span class="section-tag">websites built to perform</span><h2>Recent work that speaks for itself</h2></div>
-        <div class="portfolio-grid">
-          <div class="portfolio-card"><div class="portfolio-image"><img src="mamba.png" alt="Mamba Security"><div class="overlay"><a href="https://mambasecurity.co.za" target="_blank" class="overlay-link">Visit site <i class="fas fa-external-link-alt"></i></a></div></div><div class="portfolio-info"><span class="portfolio-category">Security & B2B</span><h3>Mamba Security</h3><p>Clean, trust‑driven website with clear service pages and strong SEO foundation.</p></div></div>
-          <div class="portfolio-card"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=700&auto=format" alt="The Fat Mermaid"><div class="overlay"><a href="https://thefatmermaid.online" target="_blank" class="overlay-link">Visit site <i class="fas fa-external-link-alt"></i></a></div></div><div class="portfolio-info"><span class="portfolio-category">Restaurant Brand + Website</span><h3>The Fat Mermaid</h3><p>Modern restaurant website focused on brand identity, menu presentation, and user experience.</p></div></div>
-        </div>
-      </div>
-      <div class="section-divider-blue-light"></div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials">
-      <div class="container">
-        <div class="section-header"><span class="section-tag">trusted by growing brands</span><h2>What our clients say</h2></div>
-        <div class="testimonial-grid">
-          <div class="testimonial-card"><i class="fas fa-quote-left"></i><p>KHI Media redesigned our website and made our business look much more professional.</p><div class="author">— Mamba Security</div></div>
-          <div class="testimonial-card"><i class="fas fa-quote-left"></i><p>They understood our brand quickly and delivered a website that feels exactly right for our restaurant.</p><div class="author">— The Fat Mermaid</div></div>
-          <div class="testimonial-card"><i class="fas fa-quote-left"></i><p>SEO improvements were noticeable within weeks. The team knows their craft.</p><div class="author">— Local Business Owner</div></div>
-        </div>
-      </div>
-      <div class="section-divider-blue"></div>
     </section>
 
     <!-- Process -->
-    <section id="process" class="process">
+    <section id="process" class="section process">
       <div class="container">
-        <div class="section-header"><span class="section-tag">our process</span><h2>How we work together</h2></div>
-        <div class="process-steps">
-          <div class="step"><div class="step-number">01</div><div class="step-icon"><i class="fas fa-lightbulb"></i></div><h3>Discovery</h3><p>We learn your goals, audience, and competition.</p></div>
-          <div class="step"><div class="step-number">02</div><div class="step-icon"><i class="fas fa-chalkboard-user"></i></div><h3>Strategy</h3><p>Define clear milestones and the best approach.</p></div>
-          <div class="step"><div class="step-number">03</div><div class="step-icon"><i class="fas fa-cogs"></i></div><h3>Build</h3><p>Design, develop, and optimise for performance.</p></div>
-          <div class="step"><div class="step-number">04</div><div class="step-icon"><i class="fas fa-chart-line"></i></div><h3>Refine</h3><p>Launch, monitor, and improve over time.</p></div>
+        <div class="section-header reveal">
+          <h2>A simple process from idea to launch.</h2>
+        </div>
+        <div class="process-grid">
+          <div class="process-step reveal"><div class="step-num">01</div><h3>Discover & Plan</h3><p>We look at your goals, audience, services, and current online presence so the project starts with a clear direction.</p></div>
+          <div class="process-step reveal"><div class="step-num">02</div><h3>Design & Build</h3><p>We create the layout, refine the wording, and build a responsive website that feels professional on every screen.</p></div>
+          <div class="process-step reveal"><div class="step-num">03</div><h3>Launch & Improve</h3><p>We prepare the site for launch, check the key details, and make sure the foundation is ready for future content, SEO, and marketing.</p></div>
         </div>
       </div>
-      <div class="section-divider-blue-light"></div>
     </section>
 
-    <!-- FAQ -->
-    <section class="faq">
+    <!-- Why Choose Us -->
+    <section class="section why">
       <div class="container">
-        <div class="section-header"><span class="section-tag">answers</span><h2>Frequently asked questions</h2></div>
-        <div class="faq-list">
-          <div class="faq-item"><button class="faq-question">How long does a website project take?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><p>Most websites take 3–6 weeks, depending on complexity and content.</p></div></div>
-          <div class="faq-item"><button class="faq-question">Do you only work with businesses in Johannesburg?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><p>No – we work with clients across South Africa and internationally.</p></div></div>
-          <div class="faq-item"><button class="faq-question">Do you offer SEO services?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><p>Yes, SEO is part of every website we build, and we also offer standalone SEO packages.</p></div></div>
-          <div class="faq-item"><button class="faq-question">Can you redesign an existing website?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><p>Absolutely – we specialise in modernising older sites while keeping SEO value intact.</p></div></div>
-          <div class="faq-item"><button class="faq-question">Will my website work on mobile devices?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><p>Yes, every site we build is fully responsive and tested on all screen sizes.</p></div></div>
-          <div class="faq-item"><button class="faq-question">Do you provide website maintenance?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><p>Yes, we offer maintenance plans to keep your site secure and up‑to‑date.</p></div></div>
-          <div class="faq-item"><button class="faq-question">How do I get started?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><p>Just click "Start a project" or contact us directly. We'll schedule a free consultation.</p></div></div>
+        <div class="section-header reveal">
+          <h2>A clear, credible presence across every digital touchpoint.</h2>
+        </div>
+        <div class="why-grid">
+          <div class="why-card reveal"><i class="fas fa-drafting-compass"></i><h3>Designed with purpose</h3><p>Every section should have a reason, from the headline to the call to action.</p></div>
+          <div class="why-card reveal"><i class="fas fa-handshake"></i><h3>Built around trust</h3><p>Your website should help customers feel confident before they contact you.</p></div>
+          <div class="why-card reveal"><i class="fas fa-chart-line"></i><h3>Ready to grow</h3><p>A strong structure makes it easier to add content, improve SEO, and support future campaigns.</p></div>
         </div>
       </div>
-      <div class="section-divider-blue"></div>
     </section>
 
-    <!-- Final CTA -->
-    <section id="contact" class="final-cta">
+    <!-- Testimonials -->
+    <section class="section testimonials">
       <div class="container">
-        <div class="cta-card">
-          <h2>Ready to grow your brand online?</h2>
-          <p>Let’s build a website and digital presence that helps your business stand out – and actually works.</p>
-          <div class="cta-buttons">
-            <a href="contact.html" class="btn-primary btn-large">Start a project <i class="fas fa-arrow-right"></i></a>
-            <a href="contact.html" class="btn-secondary btn-large">Contact us <i class="fas fa-comments"></i></a>
+        <div class="section-header reveal">
+          <h2>Proof is built through the work.</h2>
+          <p class="subhead">As KHI Media grows, this section will showcase real client feedback, project results, and completed case studies.</p>
+        </div>
+        <div class="testimonial-grid">
+          <div class="testimonial-card reveal">
+            <i class="fas fa-quote-left quote-icon"></i>
+            <p>Website direction</p>
+            <div class="client"><strong>Clean layouts, clear service pages, and stronger first impressions for local businesses.</strong></div>
           </div>
+          <div class="testimonial-card reveal">
+            <i class="fas fa-quote-left quote-icon"></i>
+            <p>Brand consistency</p>
+            <div class="client"><strong>Visuals, wording, and content direction that help businesses feel more polished online.</strong></div>
+          </div>
+          <div class="testimonial-card reveal">
+            <i class="fas fa-quote-left quote-icon"></i>
+            <p>Ongoing improvement</p>
+            <div class="client"><strong>Support for updates, content, SEO basics, and better digital structure over time.</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ (pricing question removed) -->
+    <section class="section faq">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Questions clients often ask</h2>
+          <p class="subhead">Clear answers before we start working together.</p>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item reveal">
+            <button class="faq-question">How long does a website take? <i class="fas fa-plus"></i></button>
+            <div class="faq-answer">Most small business websites take around 4 to 8 weeks, depending on the size of the site, feedback, and how ready the content is.</div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-question">Can you redesign my existing website? <i class="fas fa-plus"></i></button>
+            <div class="faq-answer">Yes. We can review what you already have, keep what works, and rebuild the parts that need better design, structure, or wording.</div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-question">Do you offer social media support? <i class="fas fa-plus"></i></button>
+            <div class="faq-answer">Yes. KHI Media can help with content direction, post design, brand consistency, and social media planning.</div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-question">Will my website work on mobile? <i class="fas fa-plus"></i></button>
+            <div class="faq-answer">Yes. Every website should be responsive, easy to use, and properly structured for mobile, tablet, and desktop.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta">
+      <div class="container cta-inner">
+        <h3>Ready to make your business look stronger online?</h3>
+        <p>Let’s create a website and brand presence that feels clear, professional, and built around the customers you want to reach.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn-primary">Request a Quote <i class="fas fa-arrow-right"></i></a>
+          <a href="https://wa.me/27656914952" class="btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp KHI Media</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+      <div class="container contact-grid">
+        <div class="contact-info reveal">
+          <h2>Let’s build your online presence properly.</h2>
+          <p>Get in touch to discuss your business, your goals, and the best next step for your website or content.</p>
+          <div class="contact-details">
+            <div><i class="fas fa-envelope"></i> contactus@KHIMedia.co.za</div>
+            <div><i class="fas fa-phone-alt"></i> 065 691 4952</div>
+            <div><i class="fab fa-whatsapp"></i> 065 691 4952 (WhatsApp)</div>
+            <div><i class="fas fa-map-marker-alt"></i> Johannesburg, South Africa</div>
+          </div>
+          <div class="service-areas">Working with businesses across Johannesburg, Edenvale, Bedfordview, the East Rand, and surrounding areas.</div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-brand"><div class="logo-footer">KHI<span>MEDIA</span></div><p>Digital agency based in Johannesburg, South Africa. We build websites, SEO, and brand systems that work.</p><div class="social-links"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-x-twitter"></i></a></div></div>
-        <div class="footer-links"><div><h4>Navigation</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="about.html">About</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="contact.html">Contact</a></li></ul></div><div><h4>Services</h4><ul><li><a href="services.html">Website Development</a></li><li><a href="services.html">SEO Services</a></li><li><a href="services.html">Social Media Marketing</a></li><li><a href="services.html">Branding</a></li></ul></div><div><h4>Contact</h4><ul><li><a href="mailto:contact@khimedia.co.za">contact@khimedia.co.za</a></li><li><a href="tel:+27656914952">065 691 4952</a></li><li>Johannesburg, South Africa</li></ul></div></div>
+        <div class="footer-brand">
+          <img src="lightlogo.png" alt="KHI Media" class="footer-logo" onerror="this.src='https://placehold.co/200x60?text=KHI+Media'">
+          <p>KHI Media helps businesses create professional websites, stronger social content, and clearer digital brand systems built around trust, consistency, and growth.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Website Design</a></li>
+            <li><a href="services.html">Website Development</a></li>
+            <li><a href="services.html">Social Media Marketing</a></li>
+            <li><a href="services.html">SEO Foundations</a></li>
+            <li><a href="services.html">Brand Identity</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul class="contact-list">
+            <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/27656914952">065 691 4952</a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:contactus@KHIMedia.co.za">contactus@KHIMedia.co.za</a></li>
+            <li><i class="fas fa-map-pin"></i> Johannesburg, SA</li>
+          </ul>
+        </div>
       </div>
-      <div class="footer-bottom"><p>© <span id="currentYear"></span> KHI Media. All rights reserved.</p></div>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> KHI Media. All rights reserved.</p>
+      </div>
     </div>
   </footer>
+
+  <a href="https://wa.me/27656914952" class="floating-wa" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span>WhatsApp us</span>
+  </a>
 
   <script src="index.js"></script>
 </body>
